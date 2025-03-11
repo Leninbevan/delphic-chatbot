@@ -1,6 +1,6 @@
 import { betterAuth } from 'better-auth';
 export const auth = betterAuth({
-  baseURL: 'http://localhost:5174/api/login',
+  baseURL: 'http://localhost:5173/api/login',
 });
 
 export async function login(email: string, password: string) {
@@ -18,7 +18,8 @@ export async function login(email: string, password: string) {
       try {
         const errorData = await response.json();
         errorMessage = errorData.message || errorMessage;
-      } catch {
+      } catch (e) {
+        console.error('Error parsing error response:', e);
       }
       throw new Error(errorMessage);
     }

@@ -23,7 +23,15 @@
   import AvatarImage from "$lib/components/ui/avatar/avatar-image.svelte";
   import AvatarFallback from "$lib/components/ui/avatar/avatar-fallback.svelte";
   import * as Select from "$lib/components/ui/select/index.js";
+    import { goto } from "$app/navigation";
   let { children } = $props();
+
+
+  function handleNavigate(endPoint: string): void {
+    goto(endPoint);
+  }
+
+
 </script>
 
 <Toaster position="top-right" />
@@ -45,31 +53,31 @@
         <div class="flex-1">
           <nav class="grid items-start px-2 text-sm font-medium lg:px-4">
             <div>
-              <a
-                href="##"
-                class="text-base text-muted-foreground hover:text-primary flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
-              >
+                <div
+                 onclick={() => handleNavigate("discover")}
+                class="text-base text-muted-foreground hover:text-primary cursor-pointer flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
+                >
                 Discover
-              </a>
-              <div class="border-l-2 border-black ml-5">
-                <a
-                  href="##"
-                  class="text-muted-foreground hover:text-primary flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
+                </div>
+                <div class="border-l-2 border-black ml-5">
+                <div
+                  onclick={() => handleNavigate("spaces")}
+                  class="text-muted-foreground hover:text-primary cursor-pointer flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
                 >
                   Spaces
-                </a>
-                <a
-                  href="##"
-                  class="text-muted-foreground hover:text-primary flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
+                </div>
+                <div
+                onclick={() => handleNavigate("agents")}
+                  class="text-muted-foreground hover:text-primary cursor-pointer flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
                 >
                   Agents
-                </a>
-                <a
-                  href="##"
+                </div>
+                <div
+                onclick={() => handleNavigate("characters")}
                   class="text-muted-foreground hover:text-primary flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
                 >
                   Characters
-                </a>
+                </div>
               </div>
               <a
                 href="##"
@@ -249,4 +257,4 @@
 {/if}
 
 <!-- Render Children -->
-<!-- {@render children()} -->
+{@render children()}
