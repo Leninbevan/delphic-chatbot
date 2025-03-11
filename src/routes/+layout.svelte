@@ -23,14 +23,12 @@
   import AvatarImage from "$lib/components/ui/avatar/avatar-image.svelte";
   import AvatarFallback from "$lib/components/ui/avatar/avatar-fallback.svelte";
   import * as Select from "$lib/components/ui/select/index.js";
-    import { goto } from "$app/navigation";
+  import { goto } from "$app/navigation";
   let { children } = $props();
-
 
   function handleNavigate(endPoint: string): void {
     goto(endPoint);
   }
-
 
 </script>
 
@@ -44,9 +42,9 @@
         <div class="h-14 flex items-center justify-center border-b lg:h-[60px]">
           <a href="/" class="w-full h-full">
             <img
-              src={logo}
+              src="https://logowik.com/content/uploads/images/chatbot9103.jpg"
               alt="logo"
-              class="max-w-full max-h-full w-full object-fill"
+              class="max-w-full max-h-full w-full object-cover"
             />
           </a>
         </div>
@@ -252,23 +250,8 @@
       </DropdownMenu.Root>
     </header> -->
 
-      <main class="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6">
+      <main class="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-[50px]">
         {@render children()}
-        <!-- <div class="flex flex-col">
-          <h1 class="text-lg font-semibold md:text-2xl">Discover</h1>
-          <div>Text that will describe the page in brief</div>
-        </div>
-        <div class="flex flex-1 items-center justify-center rounded-lg border border-dashed shadow-sm">
-          <div class="flex flex-col items-center gap-1 text-center">
-            <h3 class="text-2xl font-bold tracking-tight">
-              You have no products
-            </h3>
-            <p class="text-muted-foreground text-sm">
-              You can start selling as soon as you add a product.
-            </p>
-            <Button class="mt-4">Add Product</Button>
-          </div>
-        </div> -->
       </main>
     </div>
   </div>
