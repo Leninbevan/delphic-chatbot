@@ -40,7 +40,7 @@
     class="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]"
   >
     <div class="bg-muted/40 hidden border-r md:block">
-      <div class="flex h-full max-h-screen flex-col gap-2">
+      <div class="flex h-full max-h-screen flex-col gap-4">
         <div class="h-14 flex items-center justify-center border-b lg:h-[60px]">
           <a href="/" class="w-full h-full">
             <img
@@ -50,7 +50,7 @@
             />
           </a>
         </div>
-        <div class="flex-1">
+        <div>
           <nav class="grid items-start px-2 text-sm font-medium lg:px-4">
             <div>
                 <div
@@ -94,8 +94,26 @@
             </div>
           </nav>
         </div>
-        <div class="flex-1">
-          
+        <div class="flex flex-col gap-2.5 px-4">
+          <div>Recent</div>
+          <div class="flex items-center justify-between p-4 text-lg border border-black">
+            <div>
+              <Avatar>
+                <AvatarImage src="https://github.com/shadcn.png" alt="chatbot" />
+                <AvatarFallback>chatbot</AvatarFallback>
+              </Avatar>
+            </div>
+            <div>Space name</div>
+          </div>
+          <div class="flex items-center justify-between p-4 text-lg border border-black">
+            <div>
+              <Avatar>
+                <AvatarImage src="https://github.com/shadcn.png" alt="chatbot" />
+                <AvatarFallback>chatbot</AvatarFallback>
+              </Avatar>
+            </div>
+            <div>Agent name</div>
+          </div>
         </div>
         <div class="mt-auto p-4">
           <div class="flex items-center gap-4">
