@@ -74,23 +74,23 @@
                 </div>
                 <div
                 onclick={() => handleNavigate("characters")}
-                  class="text-muted-foreground hover:text-primary flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
+                  class="text-muted-foreground hover:text-primary cursor-pointer flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
                 >
                   Characters
                 </div>
               </div>
-              <a
-                href="##"
-                class="text-muted-foreground hover:text-primary flex items-center gap-3 rounded-lg px-3 py-2 transition-all text-base	"
+              <div
+              onclick={() => handleNavigate("chats")}
+                class="text-muted-foreground hover:text-primary cursor-pointer flex items-center gap-3 rounded-lg px-3 py-2 transition-all text-base	"
               >
                 Chats
-              </a>
-              <a
-                href="##"
-                class="text-base text-muted-foreground hover:text-primary flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
+              </div>
+              <div
+              onclick={() => handleNavigate("dashboard")}
+                class="text-base text-muted-foreground hover:text-primary cursor-pointer flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
               >
                 Dashboard
-              </a>
+              </div>
             </div>
           </nav>
         </div>
@@ -272,7 +272,8 @@
       </main>
     </div>
   </div>
+  {:else}
+  <!-- Render Children -->
+  {@render children()}
 {/if}
 
-<!-- Render Children -->
-{@render children()}
