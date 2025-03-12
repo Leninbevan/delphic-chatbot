@@ -6,7 +6,7 @@
   
   <div class="flex flex-col">
     <div>
-      <h1 class="text-lg font-bold md:text-2xl">Spaces</h1>
+      <h1 class="text-lg font-bold md:text-2xl">Characters</h1>
       <div>Text that will describe the page in brief</div>
       <div>
         <div class="flex items-center gap-4 text-center p-[70px]">
@@ -27,14 +27,15 @@
       <div class="flex flex-wrap gap-y-5 gap-x-10 mt-4">
         <Card.Root class="flex rounded-none h-[130px] p-4 gap-6 w-fit">
           <div class="h-full">
-            <img src="https://github.com/shadcn.png" alt="card" class="max-w-full max-h-full w-full object-contain"/>
+            <img
+              src="https://github.com/shadcn.png"
+              alt="card"
+              class="max-w-full max-h-full w-full object-contain"
+            />
           </div>
           <div class="flex flex-col justify-around">
-            <Card.Header
-              class="p-0"
-            >
-              <Card.Title class="text-l font-medium"
-                >Title of the item</Card.Title
+            <Card.Header class="p-0">
+              <Card.Title class="text-l font-medium">Title of the item</Card.Title
               >
             </Card.Header>
             <Card.Content class="p-0">
@@ -46,14 +47,15 @@
         </Card.Root>
         <Card.Root class="flex rounded-none h-[130px] p-4 gap-6 w-fit">
           <div class="h-full">
-            <img src="https://github.com/shadcn.png" alt="card" class="max-w-full max-h-full w-full object-contain"/>
+            <img
+              src="https://github.com/shadcn.png"
+              alt="card"
+              class="max-w-full max-h-full w-full object-contain"
+            />
           </div>
           <div class="flex flex-col justify-around">
-            <Card.Header
-              class="p-0"
-            >
-              <Card.Title class="text-l font-medium"
-                >Title of the item</Card.Title
+            <Card.Header class="p-0">
+              <Card.Title class="text-l font-medium">Title of the item</Card.Title
               >
             </Card.Header>
             <Card.Content class="p-0">
@@ -65,14 +67,15 @@
         </Card.Root>
         <Card.Root class="flex rounded-none h-[130px] p-4 gap-6 w-fit">
           <div class="h-full">
-            <img src="https://github.com/shadcn.png" alt="card" class="max-w-full max-h-full w-full object-contain"/>
+            <img
+              src="https://github.com/shadcn.png"
+              alt="card"
+              class="max-w-full max-h-full w-full object-contain"
+            />
           </div>
           <div class="flex flex-col justify-around">
-            <Card.Header
-              class="p-0"
-            >
-              <Card.Title class="text-l font-medium"
-                >Title of the item</Card.Title
+            <Card.Header class="p-0">
+              <Card.Title class="text-l font-medium">Title of the item</Card.Title
               >
             </Card.Header>
             <Card.Content class="p-0">
