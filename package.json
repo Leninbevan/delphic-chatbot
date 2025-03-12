@@ -13,6 +13,7 @@
 		"lint": "eslint ."
 	},
 	"devDependencies": {
+		"@better-auth/cli": "^1.2.3",
 		"@eslint/compat": "^1.2.5",
 		"@eslint/js": "^9.18.0",
 		"@sveltejs/adapter-auto": "^4.0.0",
@@ -43,6 +44,7 @@
 	"dependencies": {
 		"@auth/sveltekit": "^1.8.0",
 		"better-auth": "^1.2.3",
+		"mysql2": "^3.13.0",
 		"shadcn-ui": "^0.9.5",
 		"svelte-sonner": "^0.3.28"
 	}
