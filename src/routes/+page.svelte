@@ -7,7 +7,6 @@
   import Button from "$lib/components/ui/button/button.svelte";
   import { login } from "../auth";
   import { goto } from '$app/navigation';
-// import { redirect } from "@sveltejs/kit";
 
   let email = "";
   let password = "";

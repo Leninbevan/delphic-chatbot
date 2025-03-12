@@ -30,6 +30,15 @@
     goto(endPoint);
   }
 
+  const tabs = [
+    { label: "Discover", endpoint: "/discover", hasBorder: false },
+    { label: "Spaces", endpoint: "/spaces", hasBorder: true },
+    { label: "Agents", endpoint: "/agents", hasBorder: true },
+    { label: "Characters", endpoint: "/characters", hasBorder: true },
+    { label: "Chats", endpoint: "/chats", hasBorder: false },
+    { label: "Dashboard", endpoint: "/dashboard", hasBorder: false },
+  ];
+
 </script>
 
 <Toaster position="top-right" />
@@ -50,47 +59,25 @@
         </div>
         <div>
           <nav class="grid items-start px-2 text-sm font-medium lg:px-4">
-            <div>
-                <div
-                 onclick={() => handleNavigate("discover")}
-                class="text-base text-muted-foreground hover:text-primary cursor-pointer flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
-                >
-                Discover
-                </div>
-                <div class="border-l-2 border-black ml-5">
-                <div
-                  onclick={() => handleNavigate("spaces")}
-                  class="text-muted-foreground hover:text-primary cursor-pointer flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
-                >
-                  Spaces
-                </div>
-                <div
-                onclick={() => handleNavigate("agents")}
-                  class="text-muted-foreground hover:text-primary cursor-pointer flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
-                >
-                  Agents
-                </div>
-                <div
-                onclick={() => handleNavigate("characters")}
-                  class="text-muted-foreground hover:text-primary cursor-pointer flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
-                >
-                  Characters
-                </div>
-              </div>
-              <div
-              onclick={() => handleNavigate("chats")}
-                class="text-muted-foreground hover:text-primary cursor-pointer flex items-center gap-3 rounded-lg px-3 py-2 transition-all text-base	"
+            {#each tabs as tab}
+              <button
+                type="button"
+                onclick={() => handleNavigate(tab.endpoint)}
+                onkeydown={(e) => e.key === 'Enter' && handleNavigate(tab.endpoint)}
+                class="cursor-pointer flex items-center gap-3 px-3 py-2 transition-all"
+                class:text-primary={$page.url.pathname === tab.endpoint}
+                class:bg-gray-200={$page.url.pathname === tab.endpoint}
+                class:border-l-2={tab.hasBorder}
+                class:border-black={tab.hasBorder}
+                class:ml-5={tab.hasBorder}
+                class:shadow={$page.url.pathname === tab.endpoint}
+                aria-label={tab.label}
               >
-                Chats
-              </div>
-              <div
-              onclick={() => handleNavigate("dashboard")}
-                class="text-base text-muted-foreground hover:text-primary cursor-pointer flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
-              >
-                Dashboard
-              </div>
-            </div>
+                {tab.label}
+              </button>
+            {/each}
           </nav>
+          
         </div>
         <div class="flex flex-col gap-2.5 px-4">
           <div>Recent</div>
